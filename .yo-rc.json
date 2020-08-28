@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "DiabeticWellbeing",
+    "namespace": "T1D",
+    "platform": "Fiori Launchpad on Cloud Foundry",
+    "viewtype": "XML",
+    "viewname": "App",
+    "ui5libs": "Content delivery network (SAPUI5)",
+    "newdir": true,
+    "namespaceURI": "T1D",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
