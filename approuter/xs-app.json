@@ -4,5 +4,12 @@
   "logout": {
     "logoutEndpoint": "/do/logout"
   },
-  "routes": []
+  "routes": [
+    {
+      "source": "^/diabetic-srv/(.*)",
+      "authenticationType":"none",
+      "destination": "DiabeticApp_API",
+      "csrfProtection": false
+    }
+  ]
 }

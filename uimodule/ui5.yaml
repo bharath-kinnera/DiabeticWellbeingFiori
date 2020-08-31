@@ -30,6 +30,7 @@ server:
         destinations:
           - name: "DiabeticApp_API"
             url: "https://ic-cf-2020-team-565-diabetcapp-srv.cfapps.eu10.hana.ondemand.com"
+
 builder:
   customTasks:
     -  name: "ui5-task-zipper"
