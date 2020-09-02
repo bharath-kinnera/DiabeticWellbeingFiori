@@ -6,7 +6,8 @@
   },
   "routes": [
     {
-      "source": "^/diabetic-srv/(.*)",
+      "source": "^/diabetic-srv/(.*)$",
+      "target": "/diabetic-srv/$1",
       "authenticationType":"none",
       "destination": "DiabeticApp_API",
       "csrfProtection": false

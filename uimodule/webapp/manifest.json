@@ -53,9 +53,7 @@
   "sap.ui5": {
     "rootView": {
       "viewName": "T1D.DiabeticWellbeing.view.App",
-      "type": "XML",
-      "async": true,
-      "id": "idAppControl"
+      "type": "XML"
     },
     "dependencies": {
       "minUI5Version": "1.60.0",
@@ -104,25 +102,34 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "viewPath": "T1D.DiabeticWellbeing.view",
-        "controlId": "idAppControl",
+        "controlId": "app",
         "controlAggregation": "pages",
         "async": true
       },
       "routes": [
         {
           "name": "RouteApp",
-          "pattern": "RouteApp",
+          "pattern": "",
           "target": [
             "TargetApp"
+          ]
+        },
+        {
+          "name": "GlucoseLevel",
+          "pattern": "GlucoseLevel",
+          "target": [
+            "GlucoseLevel"
           ]
         }
       ],
       "targets": {
         "TargetApp": {
           "viewType": "XML",
-          "viewLevel": 1,
-          "viewId": "idAppControl",
-          "viewName": "App"
+          "viewName": "DiabeticProfile"
+        },
+        "GlucoseLevel": {
+          "viewType": "XML",
+          "viewName": "GlucoseLevelDetails"
         }
       }
     }

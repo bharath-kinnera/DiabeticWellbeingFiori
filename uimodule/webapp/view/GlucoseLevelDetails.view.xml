@@ -1,0 +1,47 @@
+ <mvc:View controllerName="T1D.DiabeticWellbeing.controller.GlucoseLevelDetails"
+
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+
+    <Page title="Glucose Levels" titleAlignment="Center" titleLevel ="H1">
+    <headerContent titleAlignment= "Center">
+      <Button id="idProfile" text="Diabetic Profile" press="onClick1"/>
+    </headerContent>
+		<content>
+
+            <Table id="idDiabeticDetailsTable" items= "{/GlucoseLevels}" mode= "SingleSelectMaster" selectionChange="OnSelectionChange">
+                <columns>
+                    <Column> <Label text = "Timestamp" /> </Column>
+                    <Column> <Label text = "Glucose Level" /> </Column>
+                    <Column> <Label text = "Insulin Count" /> </Column>
+                    <Column> <Label text = "Meal Factor" /> </Column>
+                    <Column> <Label text = "PreMeal Insulin" /> </Column>
+                    <Column> <Label text = "Carb Intake" /> </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{Timestamp}" />
+                            <Text text="{Glucose_Level}" />
+                            <Text text="{Insulin_count}" />
+                            <Text text="{Meal_Factor}" />
+                            <Text text="{PreMeal_insulin}" />
+                            <Text text="{Carb_Intake}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+         </content>
+         <footer>
+            <Bar>
+                <contentRight>
+                    <Button id="idExportCSV" text="Export to CSV" press="onClickExport"/>
+                </contentRight>
+            </Bar>
+         </footer>
+    </Page>
+
+</mvc:View>

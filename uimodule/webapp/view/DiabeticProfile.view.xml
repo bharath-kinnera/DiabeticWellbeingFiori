@@ -1,0 +1,68 @@
+ <mvc:View controllerName="T1D.DiabeticWellbeing.controller.DiabeticProfile"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+
+    <Page title="Diabetic Profile" titleAlignment="Center" titleLevel ="H1">
+    <headerContent titleAlignment= "Center">
+      <Button id="idDeatils" text="Monitor Glucose Levels" press="onClick"/>
+    </headerContent>
+		<content>
+<!--
+      <f:SimpleForm title="Diabetic Profile" editable="true" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2" emptySpanL="6"
+				emptySpanM="6">
+				<f:content>
+					<Label text="ID" design="Bold" required="true"></Label>
+					<Text id="idUserID" text="{DiabeticProfile/ID}"></Text>
+				</f:content>
+			</f:SimpleForm>
+
+-->
+
+
+            <Table id="idDiabeticProfTable" items= "{/DiabeticProfile}" mode= "SingleSelectMaster" selectionChange="OnSelectionChange">
+                <columns>
+                    <Column> <Label text = "ID" /> </Column>
+                    <Column> <Label text = "IGR" /> </Column>
+                    <Column> <Label text = "ICR" /> </Column>
+                    <Column> <Label text = "Target" /> </Column>
+                    <Column> <Label text = "Basal" /> </Column>
+                    <Column> <Label text = "BreakfastFactor" /> </Column>
+                    <Column> <Label text = "LunchFactor" /> </Column>
+                    <Column> <Label text = "SnackFactor" /> </Column>
+                    <Column> <Label text = "DinnerFactor" /> </Column>
+                    <Column> <Label text = "Comments" /> </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ID}" />
+                            <Text text="{IGR}" />
+                            <Text text="{ICR}" />
+                            <Text text="{Target}" />
+                            <Text text="{Basal}" />
+                            <Text text="{Breakfast_factor}" />
+                            <Text text="{Lunch_factor}" />
+                            <Text text="{Snacks_factor}" />
+                            <Text text="{Dinner_factor}" />
+                            <Text text="{Comments}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+
+         </content>
+         <footer>
+            <Bar>
+                <contentRight>
+                    <Button id="idProfEdit" text="Edit" press="onEditPress" />
+                    <Button id="idProfSave" text="Save" press="onSavePress" />
+                    <Button id="idProfReset" text="Reset" press="onResetPress" />
+                </contentRight>
+            </Bar>
+         </footer>
+    </Page>
+
+</mvc:View>
