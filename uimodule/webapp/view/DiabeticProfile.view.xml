@@ -1,6 +1,7 @@
  <mvc:View controllerName="T1D.DiabeticWellbeing.controller.DiabeticProfile"
   displayBlock="true"
   xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form"
   xmlns:mvc="sap.ui.core.mvc">
 
     <Page title="Diabetic Profile" titleAlignment="Center" titleLevel ="H1">
@@ -8,19 +9,8 @@
       <Button id="idDeatils" text="Monitor Glucose Levels" press="onClick"/>
     </headerContent>
 		<content>
-<!--
-      <f:SimpleForm title="Diabetic Profile" editable="true" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2" emptySpanL="6"
-				emptySpanM="6">
-				<f:content>
-					<Label text="ID" design="Bold" required="true"></Label>
-					<Text id="idUserID" text="{DiabeticProfile/ID}"></Text>
-				</f:content>
-			</f:SimpleForm>
 
--->
-
-
-            <Table id="idDiabeticProfTable" items= "{/DiabeticProfile}" mode= "SingleSelectMaster" selectionChange="OnSelectionChange">
+            <Table id="idDiabeticProfTable" items= "{/DiabeticProfile}" mode= "SingleSelect" selectionChange="OnSelectionChange">
                 <columns>
                     <Column> <Label text = "ID" /> </Column>
                     <Column> <Label text = "IGR" /> </Column>
@@ -52,6 +42,22 @@
                 </items>
 
             </Table>
+
+      <f:SimpleForm id="idSimpleForm" visible="false" title="Diabetic Profile" editable="true" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2" emptySpanL="6"
+				emptySpanM="6">
+				<f:content>
+					<Label text="ID" design="Bold" required="true"></Label>
+					<Text id="idUserID" text="{DiabeticProfile>/ID}"></Text>
+          <Label text="IGR" design="Bold" ></Label>
+					<Input id="idUserIGR" value="{DiabeticProfile>/IGR}" ></Input>
+          <Label text="ICR" design="Bold" ></Label>
+					<Input id="idUserICR" value="{DiabeticProfile>/ICR}" ></Input>
+          <Label text="Target" design="Bold" ></Label>
+					<Input id="idUserTarget" value="{DiabeticProfile>/Target}" ></Input>
+          <Label text="Basal" design="Bold" ></Label>
+					<Input id="idUserBasal" value="{DiabeticProfile>/Basal}" ></Input>
+				</f:content>
+			</f:SimpleForm>
 
          </content>
          <footer>
