@@ -43,7 +43,7 @@
 
             </Table>
 
-      <f:SimpleForm id="idSimpleForm" visible="false" title="Diabetic Profile" editable="true" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2" emptySpanL="6"
+      <f:SimpleForm id="idSimpleForm" visible="false" editable="true" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2" emptySpanL="6"
 				emptySpanM="6">
 				<f:content>
 					<Label text="ID" design="Bold" required="true"></Label>
@@ -56,6 +56,16 @@
 					<Input id="idUserTarget" value="{DiabeticProfile>/Target}" ></Input>
           <Label text="Basal" design="Bold" ></Label>
 					<Input id="idUserBasal" value="{DiabeticProfile>/Basal}" ></Input>
+          <Label text="Breakfast_factor" design="Bold" ></Label>
+					<Input id="idUserBreakfastFactor" value="{DiabeticProfile>/Breakfast_factor}" ></Input>
+          <Label text="Lunch Factor" design="Bold" ></Label>
+					<Input id="idUserLunchFactor" value="{DiabeticProfile>/Lunch_factor}" ></Input>
+          <Label text="Snacks Factor" design="Bold" ></Label>
+					<Input id="idUserSnacksFactor" value="{DiabeticProfile>/Snacks_factor}" ></Input>
+          <Label text="Dinner Factor" design="Bold" ></Label>
+					<Input id="idUserDinnerFactor" value="{DiabeticProfile>/Dinner_factor}" ></Input>
+          <Label text="Comments" design="Bold" ></Label>
+					<Input id="idUserComments" value="{DiabeticProfile>/Comments}" ></Input>
 				</f:content>
 			</f:SimpleForm>
 
